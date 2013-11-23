@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/css/styles.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    
+    <header>
+        <h1>Del Castillo, Mark Homework 7</h1>
+        <div class="hr"><hr /></div>
+        <nav>
+            
+            <span class ="link">@Html.ActionLink("Home", "Index", "Home")</span>
+            <span class ="link">@Html.ActionLink("Web Form Demo", "Form", "Home")</span>
+            <span class ="link">  
+          
+            @Html.ActionLink("About Me", "About", "Home")
+            </span>
+        </nav>
+
+
+    </header>
+    
+    
+    @RenderBody()
+    
+        
+    <footer>
+        <address>
+        <a>Contact Information </a>
+        <i><a href="mailto:peemk@hotmail.com">Email: peemk@hotmail.com</a> 
+        <a>Phone: (310)555-1212</a></i>
+        </address>
+
+
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
